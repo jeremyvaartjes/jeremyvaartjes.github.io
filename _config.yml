@@ -1,0 +1,58 @@
+site: Jeremy Vaartjes
+url: https://jeremyvaartjes.github.io
+domain: jeremyvaartjes.github.io
+title: Jeremy Vaartjes
+description: Simple and minimalistic jekyll blogging theme.
+locale: en_AU
+permalink: pretty
+author:
+  name: Jeremy Vaartjes
+  email: jeremy@vaartj.es
+  url: https://jeremy.vaartj.es
+
+baseurl: ""
+
+exclude:
+  - .jekyll-cache
+  - Sidey.LICENSE.md
+  
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jemoji
+
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title
+  
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
