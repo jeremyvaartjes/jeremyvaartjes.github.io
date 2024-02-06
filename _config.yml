@@ -2,7 +2,7 @@ site: Jeremy Vaartjes
 url: https://jeremyvaartjes.github.io
 domain: jeremyvaartjes.github.io
 title: Jeremy Vaartjes
-description: Simple and minimalistic jekyll blogging theme.
+description: Software engineer based in Canberra AU
 locale: en_AU
 permalink: pretty
 author:
@@ -15,7 +15,7 @@ baseurl: ""
 exclude:
   - .jekyll-cache
   - Sidey.LICENSE.md
-  
+
 compress_html:
   clippings: all
   comments: ["<!-- ", " -->"]
@@ -37,21 +37,18 @@ collections:
   posts:
     output: true
     permalink: /:year/:month/:day/:title
-  
+
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       layout: "default"
-  -
-    scope:
+  - scope:
       path: ""
       type: "pages"
     values:
       layout: "page"
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
